@@ -9,10 +9,35 @@ Automates:
  • Public mirror export (publish:true)
  • Safe GH_TOKEN push support
  • Directory .keep scaffolding
+ • Self-healing dependency install (PupIT)
 ──────────────────────────────────────────────
 """
 
-import os, re, sys, json, yaml, subprocess
+import importlib, subprocess, sys
+
+# ─────────────────────────────
+# 🧠 Auto-Dependency Check
+# ─────────────────────────────
+REQUIRED_PACKAGES = {
+    "yaml": "PyYAML",
+    "dotenv": "python-dotenv",
+}
+
+def ensure_dependencies():
+    """Verify required modules and install if missing."""
+    for module, package in REQUIRED_PACKAGES.items():
+        try:
+            importlib.import_module(module)
+        except ImportError:
+            print(f"📦 Missing dependency: {package}. Installing…")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+ensure_dependencies()
+
+# ─────────────────────────────
+# 📦 Imports (safe to import after deps are ensured)
+# ─────────────────────────────
+import os, re, json, yaml
 from datetime import datetime
 from shutil import copy2
 from dotenv import load_dotenv
