@@ -5,7 +5,7 @@ cycle: Chronology
 node: Secure_Agent
 status: Reference
 visibility: internal
-publish: false
+publish: true
 updated: '2025-11-11'
 version: v1.1
 ---
