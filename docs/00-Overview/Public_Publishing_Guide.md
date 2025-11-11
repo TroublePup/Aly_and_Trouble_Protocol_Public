@@ -6,16 +6,15 @@ node: PupIT_System
 status: Reference
 visibility: public
 publish: true
-updated: 2025-11-10
+updated: '2025-11-11'
 version: v1.0
 ---
 
 <!-- BADGES_START -->
-![phase](https://img.shields.io/badge/phase-Documentation-red?style=flat-square)
-![cycle](https://img.shields.io/badge/cycle-Meta-pink?style=flat-square)
-![node](https://img.shields.io/badge/node-PupIT_System-green?style=flat-square)
-![status](https://img.shields.io/badge/status-Reference-purple?style=flat-square)
-![visibility](https://img.shields.io/badge/visibility-Public-blue?style=flat-square)
+![phase](https://img.shields.io/badge/phase-Documentation-red)
+![cycle](https://img.shields.io/badge/cycle-Meta-pink)
+![node](https://img.shields.io/badge/node-PupIT_System-green)
+![status](https://img.shields.io/badge/status-Reference-purple)
 <!-- BADGES_END -->
 
 # 🌐 Public Publishing Guide  

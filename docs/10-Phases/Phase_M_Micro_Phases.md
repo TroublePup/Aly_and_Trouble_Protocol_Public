@@ -5,7 +5,7 @@ cycle: Sub_Phase_Map
 node: Secure_Agent
 status: Stable
 visibility: internal
-publish: true
+publish: false
 updated: '2025-11-11'
 version: v1.1
 ---
